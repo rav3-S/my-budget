@@ -5,9 +5,10 @@ import Navbar from "./components/navbar";
 import Stats from "./components/Stats";
 import Accounts from "./components/accounts";
 import Transactions from "./components/Transactions";
+import { useStore } from "./store";
 
 const App = () => {
-  const theme = "dark";
+  const theme = useStore((state) => state.theme);
   return (
     <main className={theme}>
       <div className="w-full px-6 md:px-20 bg-white dark:bg-slate-900">
